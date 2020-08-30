@@ -19,3 +19,7 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
     background-color: #e8e8e8;
     color: #4a4a4a;
 }
+
+div.card-hover:focus, div.card-hover:focus-within, div.card-hover:hover {
+    box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.3), 0 0px 0 1px rgba(10, 10, 10, 0.04);
+}
