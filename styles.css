@@ -24,7 +24,7 @@ div.card-hover:focus, div.card-hover:focus-within, div.card-hover:hover {
     box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.3), 0 0px 0 1px rgba(10, 10, 10, 0.04);
 }
 
-div.card-hover > div > figure > img {
+/* div.card-hover > div > figure > img {
     filter: gray;
     -webkit-filter: grayscale(1);
     filter: grayscale(1);
@@ -33,4 +33,4 @@ div.card-hover > div > figure > img {
 div.card-hover:focus, div.card-hover:focus-within, div.card-hover:hover > div > figure > img {
     -webkit-filter: grayscale(0);
     filter: none;
-}
+} */
