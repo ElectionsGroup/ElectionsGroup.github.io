@@ -54,6 +54,7 @@
     <link rel="stylesheet" href="./styles.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script src="./scripts.js"></script>
 </head>
 
@@ -127,7 +128,14 @@
                     <div class="card-content">
                         <form id="google-form"
                             action="https://docs.google.com/forms/d/e/1FAIpQLSfQ9OObrOACE3bNfzBg8qMbXv2_hpobPLLKZrNk0GEqIuLZRQ/formResponse"
-                            method="POST">
+                            method="POST"
+                            onsubmit="$(() => {
+                                event.preventDefault();
+                                if (grecaptcha.getResponse() === '') {
+                                   alert('Please check the reCAPTCHA');
+                                   window.history.back();
+                                }
+                             });">
                             <div class="field">
                                 <label class="label">Name</label>
                                 <div class="control has-icons-left has-icons-right">
@@ -156,6 +164,8 @@
                                     <textarea class="textarea" name="entry.839337160" required="required"></textarea>
                                 </div>
                             </div>
+
+                            <div class="g-recaptcha" data-sitekey="6LfphuQaAAAAAKaDv9nl9QLrumiHIaufZdmtDuv-"></div>
 
                             <div class="field is-grouped">
                                 <div class="control">
